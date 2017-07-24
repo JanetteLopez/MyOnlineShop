@@ -1,0 +1,15 @@
+
+
+
+<h1>Welcome To Jays Shop</h1>
+
+ <h2>featured Items</h2>
+ <h3>sizes are limited</h3>
+
+<ul ng-repeat="feature in vm.features">
+    <li><img width="200" height="300" src={{feature.avatar}} alt=""></li>
+    <li>{{feature.title}}</li> 
+    <li> {{feature.price}}</li>
+    <li><button class="raised">{{feature.size1}}</button><button class="raised">{{feature.size2}}</button></li>
+   
+</ul>
