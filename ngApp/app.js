@@ -1,31 +1,31 @@
 var app = angular.module("myApp", [ "ui.router"]);
 
-app.controller("home", home);
-app.controller("shirts", shirts);
-app.controller("pants", pants);
+app.controller("Home", Home);
+app.controller("Product", Product);
+app.controller("Login", Login);
 
-
+app.service("$productService", ProductService);
 
 app.config(function($stateProvider, $httpProvider, $urlRouterProvider, $locationProvider){
   $stateProvider
   .state("home",{
       url:"/",
       templateUrl:"ngApp/Views/home.html",
-      controller: home,
+      controller: Home,
       controllerAs: "vm"
   })
-  .state("shirts",{
-      url:"/shirts",
-      templateUrl:"ngApp/Views/shirts.html",
-      controller: shirts,
+  .state("product",{
+      url:"/product/:id",
+      templateUrl:"ngApp/Views/Products.html",
+      controller: Product,
       controllerAs: "vm"
   })
-  .state("pants",{
-      url:"/pants",
-      templateUrl:"ngApp/Views/pants.html",
-      controller: pants,
+   .state("login",{
+      url:"/login",
+      templateUrl:"ngApp/Views/login.html",
+      controller: Login,
       controllerAs: "vm"
-  });
+   });
   $urlRouterProvider.otherwise("/");
   $locationProvider.html5Mode(true);
 });

@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <base href="/">
     <title>Document</title>
 </head>
 <body>
+<a ui-sref="home" class="btn btn-default btn-lg btn-block">Home</a>
+<a ui-sref="login" class="btn btn-default btn-lg btn-block">Log In</a>
+
+
+
     <ui-view></ui-view>
-<a ui-sref="shirts">Shirts</a>
-<a ui-sref="pants">Pants</a>
+
+    
+
+
 
 
     <script src="node_modules/angular/angular.js"></script> 
-    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>    
-    <script src="ngApp/Controllers/home.js"></script>   
-    <script src="ngApp/Controllers/shirts.js"></script>   
-    <script src="ngApp/Controllers/pants.js" ></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script> 
+    <script src="ngApp/Services/Products.js"></script>   
+    <script src="ngApp/Controllers/home.js"></script> 
+    <script src="ngApp/Controllers/product.js"></script>
+    <script src="ngApp/Controllers/login.js"></script>  
     <script src="ngApp/app.js"></script>
 </body>
 </html>

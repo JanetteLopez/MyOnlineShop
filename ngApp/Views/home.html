@@ -1,15 +1,10 @@
 
 
 
-<h1>Welcome To Jays Shop</h1>
+<h1> Jays Shop catalog </h1>
 
- <h2>featured Items</h2>
- <h3>sizes are limited</h3>
-
-<ul ng-repeat="feature in vm.features">
-    <li><img width="200" height="300" src={{feature.avatar}} alt=""></li>
-    <li>{{feature.title}}</li> 
-    <li> {{feature.price}}</li>
-    <li><button class="raised">{{feature.size1}}</button><button class="raised">{{feature.size2}}</button></li>
-   
-</ul>
+<div>
+    <ul  ng-repeat="items in vm.clothing">
+        <li ><a ui-sref="product({ id: items.id })">{{items.name}}</a></li>
+    </ul>
+</div>
